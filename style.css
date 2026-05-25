@@ -66,8 +66,6 @@ body {
   font-size: 1.8rem;
 }
 
-/* HERO */
-
 .hero {
   position: relative;
   min-height: 100vh;
@@ -121,6 +119,10 @@ body {
   margin-bottom: 18px;
 }
 
+.typing-title {
+  min-height: 78px;
+}
+
 .hero h1 {
   font-size: 4rem;
   line-height: 1;
@@ -163,8 +165,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.25);
   color: white;
 }
-
-/* SECTION */
 
 .section {
   padding: 120px 8%;
@@ -231,32 +231,16 @@ body {
   text-align: center;
 }
 
-/* TYPING */
-
-.typing-title {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  flex-wrap: wrap;
+.fade-in {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: 0.8s ease;
 }
 
-.cursor {
-  color: var(--red);
-  animation: blink 0.7s infinite;
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }
-
-@keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
-    opacity: 0;
-  }
-}
-
-/* MOBILE */
 
 @media (max-width: 700px) {
   .navbar {
@@ -306,6 +290,10 @@ body {
 
   .label {
     display: none;
+  }
+
+  .typing-title {
+    min-height: 98px;
   }
 
   .hero h1 {

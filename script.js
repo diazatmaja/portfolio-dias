@@ -1,9 +1,11 @@
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
-menuBtn.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
+if (menuBtn && navMenu) {
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+}
 
 const fadeElements = document.querySelectorAll(".fade-in");
 
@@ -22,20 +24,21 @@ fadeElements.forEach((element) => {
   fadeObserver.observe(element);
 });
 
-const text = "Dias Atmaja";
 const typingText = document.getElementById("typingText");
-let index = 0;
 
-function typeName() {
-  if (!typingText) return;
+if (typingText) {
+  const text = typingText.textContent;
+  typingText.textContent = "";
 
-  if (index < text.length) {
-    typingText.textContent += text.charAt(index);
-    index++;
-    setTimeout(typeName, 120);
+  let index = 0;
+
+  function typeName() {
+    if (index < text.length) {
+      typingText.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeName, 120);
+    }
   }
-}
 
-window.addEventListener("load", () => {
-  typeName();
-});
+  window.addEventListener("load", typeName);
+}
