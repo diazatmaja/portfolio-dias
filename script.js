@@ -7,27 +7,10 @@ if (menuBtn && navMenu) {
   });
 }
 
-const fadeElements = document.querySelectorAll(".fade-in");
-
-const fadeObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  },
-  { threshold: 0.2 },
-);
-
-fadeElements.forEach((element) => {
-  fadeObserver.observe(element);
-});
-
 const typingText = document.getElementById("typingText");
 
 if (typingText) {
-  const text = typingText.textContent;
+  const text = typingText.textContent.trim();
   typingText.textContent = "";
 
   let index = 0;
