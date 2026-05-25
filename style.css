@@ -25,20 +25,14 @@ body {
 .loader {
   position: fixed;
   inset: 0;
-
   background: #050505;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   gap: 24px;
-
   z-index: 999999;
-
   overflow: hidden;
-
   transition:
     opacity 1s ease,
     visibility 1s ease;
@@ -46,31 +40,22 @@ body {
 
 .loader-glow {
   position: absolute;
-
   width: 500px;
   height: 500px;
-
   background: rgba(229, 9, 20, 0.25);
-
   border-radius: 50%;
-
   filter: blur(140px);
-
   animation: glowPulse 2s infinite alternate;
 }
 
 .loader-title {
   position: relative;
-
   font-size: 5rem;
   font-weight: 900;
-
   letter-spacing: 12px;
-
   animation:
     titleReveal 1.5s ease,
     floatText 2s ease-in-out infinite alternate;
-
   text-shadow:
     0 0 10px rgba(255, 255, 255, 0.25),
     0 0 35px rgba(229, 9, 20, 0.45);
@@ -78,27 +63,19 @@ body {
 
 .loader-line {
   position: relative;
-
   width: 180px;
   height: 3px;
-
   background: var(--red);
-
   overflow: hidden;
 }
 
 .loader-line::before {
   content: "";
-
   position: absolute;
-
   left: -100%;
-
   width: 100%;
   height: 100%;
-
   background: white;
-
   animation: lineMove 1.4s infinite;
 }
 
@@ -161,25 +138,28 @@ body {
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-
   padding: 22px 8%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background: rgba(0, 0, 0, 0.6);
-
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(18px);
-
+  transition: all 0.4s ease;
   z-index: 999;
+}
+
+.navbar.scrolled {
+  background: rgba(5, 5, 5, 0.88);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(229, 9, 20, 0.18);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
 }
 
 .logo {
   color: white;
   text-decoration: none;
-
   font-size: 1.7rem;
   font-weight: 800;
 }
@@ -200,12 +180,9 @@ body {
 
 .menu-btn {
   display: none;
-
   background: none;
   border: none;
-
   color: white;
-
   font-size: 2rem;
 }
 
@@ -213,14 +190,10 @@ body {
 
 .hero {
   position: relative;
-
   min-height: 100vh;
-
   display: flex;
   align-items: center;
-
   padding: 140px 8%;
-
   overflow: hidden;
 }
 
@@ -232,16 +205,13 @@ body {
 .hero-image img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   filter: brightness(0.55);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.95),
@@ -254,43 +224,33 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-
   max-width: 650px;
 }
 
 .label {
   color: var(--red);
-
   letter-spacing: 5px;
-
   font-size: 0.85rem;
   font-weight: 700;
-
   margin-bottom: 18px;
 }
 
 .hero h1 {
   font-size: 5rem;
   line-height: 1;
-
   margin-bottom: 20px;
 }
 
 .hero h2 {
   font-size: 1.5rem;
-
   margin-bottom: 20px;
-
   color: #d7d7d7;
 }
 
 .hero-desc {
   color: #b8b8b8;
-
   line-height: 1.8;
-
   max-width: 520px;
-
   margin-bottom: 35px;
 }
 
@@ -302,11 +262,8 @@ body {
 
 .btn {
   padding: 14px 28px;
-
   border-radius: 999px;
-
   text-decoration: none;
-
   font-weight: 700;
 }
 
@@ -346,18 +303,14 @@ body {
 
 .skill-grid {
   margin-top: 40px;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
   gap: 22px;
 }
 
 .skill-card {
   background: var(--gray);
-
   padding: 24px;
-
   border-radius: 20px;
 }
 
@@ -365,38 +318,42 @@ body {
 
 .project-grid {
   margin-top: 40px;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   gap: 22px;
 }
 
 .project-card {
   overflow: hidden;
-
   border-radius: 24px;
-
   position: relative;
-
   height: 320px;
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
 }
 
 .project-card img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(229, 9, 20, 0.25);
+}
+
+.project-card:hover img {
+  transform: scale(1.08);
 }
 
 .project-info {
   position: absolute;
   bottom: 0;
-
   width: 100%;
-
   padding: 24px;
-
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
 }
 
@@ -412,13 +369,11 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
-
   flex-wrap: wrap;
 }
 
 .cursor {
   color: var(--red);
-
   animation: blink 0.7s infinite;
 }
 
@@ -426,6 +381,21 @@ body {
   50% {
     opacity: 0;
   }
+}
+
+/* CURSOR GLOW */
+
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: rgba(229, 9, 20, 0.18);
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  mix-blend-mode: screen;
 }
 
 /* MOBILE */
@@ -443,18 +413,12 @@ body {
 
   .nav-menu {
     position: absolute;
-
     top: 80px;
     right: 24px;
-
     width: 220px;
-
     background: rgba(0, 0, 0, 0.95);
-
     padding: 20px;
-
     border-radius: 18px;
-
     display: none;
     flex-direction: column;
   }
@@ -469,9 +433,7 @@ body {
 
   .hero {
     justify-content: center;
-
     text-align: center;
-
     padding: 130px 24px 80px;
   }
 
@@ -507,5 +469,9 @@ body {
   .skill-grid,
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    height: 240px;
   }
 }
