@@ -17,8 +17,20 @@
   </head>
 
   <body>
+    <!-- LOADER -->
+
+    <div class="loader" id="loader">
+      <div class="loader-glow"></div>
+
+      <h1 class="loader-title">PORTFOLIO</h1>
+
+      <div class="loader-line"></div>
+    </div>
+
+    <!-- NAVBAR -->
+
     <header class="navbar">
-      <a href="#home" class="logo">Dias<span>.</span></a>
+      <a href="#home" class="logo"> Dias<span>.</span> </a>
 
       <nav class="nav-menu" id="navMenu">
         <a href="#home">Home</a>
@@ -31,16 +43,21 @@
       <button class="menu-btn" id="menuBtn">☰</button>
     </header>
 
+    <!-- HERO -->
+
     <section class="hero" id="home">
       <div class="hero-image">
         <img src="profile.png" alt="Dias Atmaja" />
       </div>
 
+      <div class="hero-overlay"></div>
+
       <div class="hero-content">
         <p class="label">PORTFOLIO 2026</p>
 
         <h1 class="typing-title">
-          <span id="typingText">Dias Atmaja</span><span class="cursor">|</span>
+          <span id="typingText">Dias Atmaja</span>
+          <span class="cursor">|</span>
         </h1>
 
         <h2>Creative Designer & Visual Storyteller</h2>
@@ -51,27 +68,34 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="#portfolio" class="btn primary">View Portfolio</a>
-          <a href="#contact" class="btn secondary">Contact Me</a>
+          <a href="#portfolio" class="btn primary"> View Portfolio </a>
+
+          <a href="#contact" class="btn secondary"> Contact Me </a>
         </div>
       </div>
     </section>
 
-    <section class="section about" id="about">
+    <!-- ABOUT -->
+
+    <section class="section" id="about">
       <div class="container">
         <p class="label">ABOUT ME</p>
+
         <h2 class="section-title">Membangun visual yang kuat dan bermakna.</h2>
+
         <p class="about-text">
           Saya adalah mahasiswa DKV yang memiliki minat besar di bidang desain,
-          editing, branding, dan web design. Saya suka membuat visual yang
-          clean, modern, cinematic, dan punya karakter kuat.
+          editing, branding, dan web design.
         </p>
       </div>
     </section>
 
-    <section class="section skills" id="skills">
+    <!-- SKILLS -->
+
+    <section class="section" id="skills">
       <div class="container">
         <p class="label">SKILLS</p>
+
         <h2 class="section-title">Creative Skillset</h2>
 
         <div class="skill-grid">
@@ -85,19 +109,23 @@
       </div>
     </section>
 
-    <section class="section portfolio" id="portfolio">
+    <!-- PORTFOLIO -->
+
+    <section class="section" id="portfolio">
       <div class="container">
         <p class="label">PROJECTS</p>
+
         <h2 class="section-title">Selected Works</h2>
 
         <div class="project-grid">
           <div class="project-card">
             <img
               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-              alt="Website VANTH"
             />
+
             <div class="project-info">
               <h3>Website VANTH</h3>
+
               <p>Landing page modern cinematic.</p>
             </div>
           </div>
@@ -105,65 +133,33 @@
           <div class="project-card">
             <img
               src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-              alt="Photography"
             />
+
             <div class="project-info">
               <h3>Photography</h3>
-              <p>Visual photography dengan tone cinematic.</p>
-            </div>
-          </div>
 
-          <div class="project-card">
-            <img
-              src="https://images.unsplash.com/photo-1542744095-291d1f67b221"
-              alt="Poster Design"
-            />
-            <div class="project-info">
-              <h3>Poster Design</h3>
-              <p>Desain poster clean, bold, dan komunikatif.</p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img
-              src="https://images.unsplash.com/photo-1536240478700-b869070f9279"
-              alt="Video Editing"
-            />
-            <div class="project-info">
-              <h3>Video Editing</h3>
-              <p>Editing video dengan mood film dan storytelling.</p>
+              <p>Visual photography cinematic.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- CONTACT -->
 
     <section class="section contact" id="contact">
       <div class="container">
         <p class="label">CONTACT</p>
-        <h2 class="section-title">Let's Work Together</h2>
-        <p class="about-text">
-          Tertarik untuk kolaborasi, project desain, atau kebutuhan visual?
-          Hubungi saya lewat kontak berikut.
-        </p>
 
-        <div class="contact-buttons">
-          <a href="https://instagram.com/" target="_blank" class="btn primary"
-            >Instagram</a
-          >
-          <a
-            href="https://wa.me/6285179614125"
-            target="_blank"
-            class="btn secondary"
-            >WhatsApp</a
-          >
+        <h2 class="section-title">Let's Work Together</h2>
+
+        <div class="hero-buttons">
+          <a href="#" class="btn primary"> Instagram </a>
+
+          <a href="#" class="btn secondary"> WhatsApp </a>
         </div>
       </div>
     </section>
-
-    <footer class="footer">
-      <p>© 2026 Dias Atmaja. All Rights Reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
   </body>

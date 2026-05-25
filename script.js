@@ -1,27 +1,46 @@
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
+/* MOBILE MENU */
+
 if (menuBtn && navMenu) {
   menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("active");
   });
 }
 
-const typingText = document.getElementById("typingText");
+/* WEBSITE LOAD */
 
-if (typingText) {
-  const text = typingText.textContent.trim();
-  typingText.textContent = "";
+window.addEventListener("load", () => {
+  /* LOADER */
 
-  let index = 0;
+  const loader = document.getElementById("loader");
 
-  function typeName() {
-    if (index < text.length) {
-      typingText.textContent += text.charAt(index);
-      index++;
-      setTimeout(typeName, 120);
+  setTimeout(() => {
+    loader.classList.add("hide");
+
+    /* TYPING */
+
+    const typingText = document.getElementById("typingText");
+
+    if (typingText) {
+      const text = "Dias Atmaja";
+
+      typingText.textContent = "";
+
+      let index = 0;
+
+      function typeName() {
+        if (index < text.length) {
+          typingText.textContent += text.charAt(index);
+
+          index++;
+
+          setTimeout(typeName, 120);
+        }
+      }
+
+      typeName();
     }
-  }
-
-  window.addEventListener("load", typeName);
-}
+  }, 2200);
+});
