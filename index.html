@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dias Atmaja | Portfolio</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- Navbar -->
     <header class="navbar">
       <a href="#" class="logo">Dias<span>.</span></a>
 
@@ -26,19 +25,23 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
 
       <button class="menu-btn" id="menuBtn">☰</button>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero section" id="home">
       <div class="hero-content fade-in">
         <p class="label">PORTFOLIO 2026</p>
-        <h1>Dias Atmaja</h1>
+
+        <h1 class="typing-title">
+          <span id="typingText"></span>
+          <span class="cursor">|</span>
+        </h1>
+
         <h2>Creative Designer & Visual Storyteller</h2>
+
         <p class="hero-desc">
           Mahasiswa DKV yang berfokus pada desain visual, branding, editing, dan
           digital experience dengan pendekatan cinematic.
@@ -49,25 +52,24 @@
           <a href="#contact" class="btn secondary">Contact Me</a>
         </div>
       </div>
+
+      <div class="hero-image">
+        <img src="profile.png" alt="Dias Atmaja" />
+      </div>
     </section>
 
-    <!-- About Me Section -->
-    <section class="about section" id="about">
+    <section class="section about" id="about">
       <div class="container fade-in">
         <p class="label">ABOUT ME</p>
         <h2 class="section-title">Membangun visual yang kuat dan bermakna.</h2>
         <p class="about-text">
           Saya adalah mahasiswa DKV yang memiliki minat besar di bidang desain,
-          editing, branding, dan web design. Saya suka menggabungkan visual yang
-          clean, modern, dan cinematic untuk menciptakan karya yang tidak hanya
-          menarik secara estetika, tetapi juga memiliki cerita dan identitas
-          yang jelas.
+          editing, branding, dan web design.
         </p>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills section" id="skills">
+    <section class="section" id="skills">
       <div class="container">
         <div class="fade-in">
           <p class="label">SKILLS</p>
@@ -81,14 +83,11 @@
           <div class="skill-card fade-in">🎨 Graphic Design</div>
           <div class="skill-card fade-in">🔥 Branding</div>
           <div class="skill-card fade-in">🎬 Video Editing</div>
-          <div class="skill-card fade-in">✨ Motion Graphic</div>
-          <div class="skill-card fade-in">📷 Photography</div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio section" id="portfolio">
+    <section class="section portfolio" id="portfolio">
       <div class="container">
         <div class="fade-in">
           <p class="label">PROJECTS</p>
@@ -99,133 +98,40 @@
           <div class="project-card fade-in">
             <img
               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-              alt="Website Brand VANTH"
+              alt="Website VANTH"
             />
             <div class="project-info">
-              <h3>Website Brand VANTH</h3>
-              <p>Modern landing page untuk identitas brand.</p>
+              <h3>Website VANTH</h3>
+              <p>Landing page modern cinematic.</p>
             </div>
           </div>
 
           <div class="project-card fade-in">
             <img
               src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-              alt="Fotografy"
+              alt="Photography"
             />
             <div class="project-info">
-              <h3>Fotografy</h3>
-              <p>Visual photography dengan tone cinematic.</p>
-            </div>
-          </div>
-
-          <div class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1542744095-291d1f67b221"
-              alt="Poster Design"
-            />
-            <div class="project-info">
-              <h3>Poster Design</h3>
-              <p>Desain poster clean, bold, dan komunikatif.</p>
-            </div>
-          </div>
-
-          <div class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1536240478700-b869070f9279"
-              alt="Cinematic Editing"
-            />
-            <div class="project-info">
-              <h3>Cinematic Editing</h3>
-              <p>Editing video dengan mood film dan storytelling.</p>
-            </div>
-          </div>
-
-          <div class="project-card fade-in">
-            <img
-              src="https://images.unsplash.com/photo-1558655146-d09347e92766"
-              alt="Motion Graphic"
-            />
-            <div class="project-info">
-              <h3>Motion Graphic</h3>
-              <p>Animasi visual untuk konten digital kreatif.</p>
+              <h3>Photography</h3>
+              <p>Visual photography cinematic.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="experience section" id="experience">
-      <div class="container">
-        <div class="fade-in">
-          <p class="label">EXPERIENCE</p>
-          <h2 class="section-title">Creative Journey</h2>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-card fade-in">
-            <h3>PKL di Humas Polres Tegal</h3>
-            <p>
-              Mengerjakan kebutuhan dokumentasi, konten visual, dan publikasi.
-            </p>
-          </div>
-
-          <div class="timeline-card fade-in">
-            <h3>Tim Videografi & Fotografi SMK</h3>
-            <p>
-              Terlibat dalam dokumentasi acara, produksi video, dan foto
-              kreatif.
-            </p>
-          </div>
-
-          <div class="timeline-card fade-in">
-            <h3>Project Kampus DKV</h3>
-            <p>
-              Mengerjakan project desain, branding, visual identity, dan media
-              digital.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact section" id="contact">
+    <section class="section contact" id="contact">
       <div class="container fade-in">
         <p class="label">CONTACT</p>
-        <h2 class="section-title">Let’s Create Something</h2>
-        <p class="contact-text">
-          Tertarik untuk kolaborasi, project desain, atau kebutuhan visual?
-          Hubungi saya melalui kontak berikut.
-        </p>
+        <h2 class="section-title">Let's Work Together</h2>
 
-        <div class="contact-grid">
-          <a href="https://instagram.com/" target="_blank" class="contact-card"
-            >📸 Instagram</a
-          >
-          <a href="mailto:diasatmaja@email.com" class="contact-card"
-            >✉️ Email</a
-          >
-          <a
-            href="https://wa.me/6285179614125"
-            target="_blank"
-            class="contact-card"
-            >💬 WhatsApp</a
-          >
+        <div class="hero-buttons">
+          <a href="#" class="btn primary">Instagram</a>
+          <a href="#" class="btn secondary">WhatsApp</a>
         </div>
-
-        <a href="mailto:diasatmaja@email.com" class="btn primary contact-btn"
-          >Contact Me</a
-        >
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>© 2026 Dias Atmaja. All Rights Reserved.</p>
-    </footer>
-
-    <!-- JavaScript -->
     <script src="script.js"></script>
   </body>
 </html>
